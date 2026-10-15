@@ -94,8 +94,7 @@ def layoutExcluir():
 def layoutListar():
     sg.PopupScrolled(*funcionarios, title='Lista')
     
-with open(r"cadastroDeFuncionarios\data.txt", "r") as ler:
-    funcionarios = eval(ler.read())
+funcionarios = []
 
 while True:
     janela = layoutMenu()
@@ -131,6 +130,3 @@ while True:
         continue
     
     janela.close()
-
-with open(r"cadastroDeFuncionarios\data.txt", "w") as escrever:
-    escrever.write(str(funcionarios))
